@@ -219,6 +219,8 @@ const getFeesData = async(req,res)=>{
       res.status(200).json({
         data:findData
       })
+    }else{
+      res.status(404).json({data:[]})
     }
   } catch (error) {
     console.log(error.message);
