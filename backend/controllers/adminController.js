@@ -162,10 +162,10 @@ const updateAdminProfile = asyncHandler(async (req, res) => {
 
 const deleteUser = asyncHandler(async (req, res) => {
   const userId = req.body.id; 
-  console.log('hello',userId);
+ 
   try {
 
-    const deletedUser = await User.findByIdAndDelete(userId);
+    const deletedUser = await Student.findByIdAndDelete(userId);
     if (!deletedUser) {
      
       res.status(404).json({ message: "User not found" });
